@@ -40,12 +40,13 @@
     color: #333;
   }
 
-  /* ヒーローセクション（背景画像差し替え） */
+  /* ヒーローセクション（背景画像） */
   .hero {
     position: relative;
     height: 60vh;
     min-height: 400px;
-    background: url('images/hero.jpg') no-repeat center center/cover; /* ここを差し替え */
+    background: url('images/hero.jpg') no-repeat center center;
+    background-size: cover; /* 画像全体をカバー表示 */
     display:flex;
     align-items:center;
     justify-content:center;
@@ -75,7 +76,6 @@
     line-height:1.6;
   }
 
-  /* 以下は他のセクション例: 必要に応じてカスタマイズ */
   section {
     padding: 50px 20px;
     max-width: 1000px;
@@ -119,7 +119,13 @@
   </div>
 </section>
 
-<!-- 以下、他のセクションやフッターなどを挿入 -->
+<!-- 他のセクションはお好みで追加 -->
+<!-- 例:
+<section id="reason">
+  <h2>選ばれる理由</h2>
+  <p>ここに選ばれる理由を記述</p>
+</section>
+-->
 
 <footer>
   &copy; 2024 1Dayポーカーディーラー All rights reserved.
@@ -127,4 +133,5 @@
 
 </body>
 </html>
+
 
