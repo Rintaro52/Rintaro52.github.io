@@ -10,170 +10,76 @@
     margin:0;
     padding:0;
     color: #333;
+    box-sizing: border-box;
+  }
+
+  * {
+    box-sizing: inherit;
   }
 
   header {
     background: #fff;
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position:sticky;
-    top:0;
-    z-index:1000;
-    display:flex;
-    align-items:center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
   }
 
   header .logo {
-    font-weight:bold;
-    font-size:1.2em;
+    font-weight: bold;
+    font-size: 1.2em;
   }
 
   header nav a {
-    margin-left:20px;
-    text-decoration:none;
-    color:#333;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
   }
 
-  /* ヒーローセクション（動画背景想定） */
+  /* ヒーローセクション（背景画像差し替え） */
   .hero {
     position: relative;
     height: 60vh;
     min-height: 400px;
-    background: #000;
+    background: url('images/hero.jpg') no-repeat center center/cover; /* ここを差し替え */
     display:flex;
     align-items:center;
     justify-content:center;
     color: #fff;
     text-align:center;
   }
-  .hero video {
-    position:absolute;
-    top:0; left:0;
-    width:100%;
-    height:100%;
-    object-fit: cover;
-    z-index:-1;
-  }
+
   .hero .overlay {
     background: rgba(0,0,0,0.3);
     position:absolute;
     top:0; left:0; right:0; bottom:0;
-    z-index:-1;
+    z-index:1;
   }
+
   .hero .content {
     max-width:600px;
     padding:20px;
+    z-index:2;
   }
+
   .hero h1 {
     font-size:2em;
     margin-bottom:20px;
   }
+
   .hero p {
     line-height:1.6;
   }
 
-  /* セクション例：実績や特徴、料金、プログラム内容など */
+  /* 以下は他のセクション例: 必要に応じてカスタマイズ */
   section {
     padding: 50px 20px;
     max-width: 1000px;
     margin:0 auto;
-  }
-
-  .features {
-    background:#f7f7f7;
-    text-align:center;
-  }
-
-  .features h2 {
-    margin-bottom:20px;
-    font-size:1.5em;
-  }
-
-  .features .cards {
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-    justify-content:center;
-  }
-
-  .features .card {
-    background:#fff;
-    box-shadow:0 2px 5px rgba(0,0,0,0.1);
-    padding:20px;
-    flex:1 1 300px;
-    min-width:300px;
-    box-sizing:border-box;
-  }
-
-  .card img {
-    max-width:100%;
-    height:auto;
-    margin-bottom:10px;
-  }
-
-  /* 料金などのセクション */
-  .price {
-    background: #ffffff;
-    text-align:center;
-  }
-
-  .price h2 {
-    margin-bottom:20px;
-  }
-
-  .price .amount {
-    font-size:2em;
-    margin:20px 0;
-    font-weight:bold;
-  }
-
-  /* TODO: 値が確定していない部分をコメントで印をつけます */
-  /* 例: 価格、定員数、受講期間など */
-  /* コース料金: TODO: actual priceを確認 */
-  /* 定員: TODO: actual numberを確認 */
-
-  /* Q&A */
-  .qa h2 {
-    margin-bottom:20px;
-  }
-  .qa dl {
-    margin:20px 0;
-  }
-  .qa dt {
-    font-weight:bold;
-    margin-top:10px;
-  }
-  .qa dd {
-    margin-left:0;
-    margin-bottom:10px;
-  }
-
-  /* 会社概要 */
-  .company {
-    background:#fafafa;
-  }
-
-  /* CTAセクション(お問い合わせや申込み) */
-  .cta-section {
-    background:#333;
-    color:#fff;
-    text-align:center;
-    padding:50px 20px;
-  }
-  .cta-section h2 {
-    margin-bottom:20px;
-  }
-  .cta-section p {
-    margin-bottom:30px;
-  }
-  .cta-section button {
-    background:#f1c40f;
-    border:none;
-    padding:15px 30px;
-    font-weight:bold;
-    cursor:pointer;
-    border-radius:5px;
   }
 
   footer {
@@ -189,7 +95,6 @@
       font-size:1.5em;
     }
   }
-
 </style>
 </head>
 <body>
@@ -206,76 +111,15 @@
 </header>
 
 <section class="hero">
-  <video src="https://example.com/video.mp4" autoplay muted loop playsinline></video>
   <div class="overlay"></div>
   <div class="content">
     <h1>未経験からたった1日でポーカーディーラーへ</h1>
-    <p>プロのディーラーによる短期集中トレーニングで、  
+    <p>プロのディーラーによる短期集中トレーニングで、<br>
     すぐにテーブルに立つスキルを身につけましょう。</p>
   </div>
 </section>
 
-<section id="reason" class="features">
-  <h2>選ばれる理由</h2>
-  <div class="cards">
-    <div class="card">
-      <img src="https://example.com/reason1.jpg" alt="理由1">
-      <h3>未経験でも安心</h3>
-      <p>入門から丁寧な指導で初心者でも問題なし</p>
-    </div>
-    <div class="card">
-      <img src="https://example.com/reason2.jpg" alt="理由2">
-      <h3>プロによる指導</h3>
-      <p>現役ディーラーが直接スキルを伝授</p>
-    </div>
-    <div class="card">
-      <img src="https://example.com/reason3.jpg" alt="理由3">
-      <h3>即実践可能</h3>
-      <p>1日で基本をマスターし、そのままイベントで活躍可</p>
-    </div>
-  </div>
-</section>
-
-<section id="price" class="price">
-  <h2>料金</h2>
-  <p>1日集中コース</p>
-  <div class="amount">￥<!-- TODO: 値を確認 --></div>
-  <p>受講期間: 1日(○時間) <!-- TODO: 実際の時間を確認 --></p>
-  <p>定員: <!-- TODO: 定員数を確認 -->名まで</p>
-</section>
-
-<section id="voices">
-  <h2>推薦者の声</h2>
-  <p>ここに推薦者からのコメントや動画、テキストレビューを掲載</p>
-  <!-- TODO: 実際の推薦コメント・写真を挿入 -->
-</section>
-
-<section id="company" class="company">
-  <h2>会社概要</h2>
-  <p>社名: <!-- TODO: 会社名 -->株式会社XXX</p>
-  <p>所在地: <!-- TODO: 住所 -->東京都○○区○○</p>
-  <p>設立: <!-- TODO: 設立年 -->XXXX年</p>
-  <p>代表者: <!-- TODO: 代表者名 --></p>
-  <p>事業内容: <!-- TODO: 事業内容 --></p>
-  <p>お問い合わせ: <!-- TODO: 問合せ先の連絡先 --></p>
-</section>
-
-<section id="qa" class="qa">
-  <h2>Q&A</h2>
-  <dl>
-    <dt>Q: 未経験でも本当に1日でディーラーになれますか？</dt>
-    <dd>A: はい、初心者特化のカリキュラムで問題ありません。</dd>
-
-    <dt>Q: 終了後すぐに仕事に活かせますか？</dt>
-    <dd>A: コース修了後は基本のディーリングスキルを習得し、イベントなどで即活躍いただけます。</dd>
-  </dl>
-</section>
-
-<section class="cta-section">
-  <h2>まずは詳細をご覧ください</h2>
-  <p>お問い合わせ・お申し込みはこちらから</p>
-  <button onclick="alert('お問い合わせページへ移動（仮）')">お問い合わせ</button>
-</section>
+<!-- 以下、他のセクションやフッターなどを挿入 -->
 
 <footer>
   &copy; 2024 1Dayポーカーディーラー All rights reserved.
