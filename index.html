@@ -9,6 +9,11 @@
       margin: 0;
       font-family: 'Helvetica Neue', Arial, sans-serif;
       color: #333;
+      box-sizing: border-box;
+    }
+
+    * {
+      box-sizing: inherit;
     }
 
     /* ヘッダー */
@@ -28,6 +33,17 @@
     header .logo {
       font-weight: bold;
       font-size: 1.2em;
+      flex-shrink: 0;
+    }
+
+    header nav {
+      display: flex;
+      flex-wrap: wrap; /* 横幅が足りない場合に折り返し */
+      justify-content: flex-end;
+      /* 横スクロール対応にしたい場合は以下を有効化:
+      overflow-x: auto;
+      white-space: nowrap;
+      */
     }
 
     header nav a {
@@ -35,6 +51,7 @@
       text-decoration: none;
       color: #333;
       font-size: 0.9em;
+      flex-shrink: 0;
     }
 
     /* メインビジュアル */
@@ -87,6 +104,15 @@
       background: #d4ac0d;
     }
 
+    /* セクションのスタイルは簡易的なものです。実際のコンテンツに合わせて調整してください。 */
+    section {
+      padding: 50px 20px;
+    }
+
+    section:nth-child(even) {
+      background: #fafafa;
+    }
+
     /* フッター */
     footer {
       text-align: center;
@@ -133,38 +159,35 @@
     </div>
   </section>
 
-  <!-- 以下はダミーセクション：実際のコンテンツを追加・修正してください。 -->
-  <section id="reason" style="padding: 50px 20px;">
+  <section id="reason">
     <h2>選ばれる理由</h2>
     <p>ここに「1Dayポーカーディーラー」が選ばれる理由を記述します。</p>
   </section>
 
-  <section id="price" style="padding: 50px 20px; background:#fafafa;">
+  <section id="price">
     <h2>料金</h2>
     <p>ここにコースの料金詳細を記述します。</p>
   </section>
 
-  <section id="voices" style="padding: 50px 20px;">
+  <section id="voices">
     <h2>推薦者の声</h2>
     <p>ここに推薦者からのメッセージや感想を記述します。</p>
   </section>
 
-  <section id="company" style="padding: 50px 20px; background:#fafafa;">
+  <section id="company">
     <h2>会社概要</h2>
     <p>ここに会社の情報（社名、所在地、設立年、代表者名、連絡先、事業内容など）を記述します。</p>
   </section>
 
-  <section id="qa" style="padding: 50px 20px;">
+  <section id="qa">
     <h2>Q&A</h2>
-    <p>ここにユーザーからよくある質問とその回答を記述します。</p>
     <ul>
-      <li><strong>Q1:</strong> 全くの未経験者でも本当に1日でディーラーになれますか？  
+      <li><strong>Q1:</strong> 全くの未経験者でも本当に1日でディーラーになれますか？<br>
         <em>A1: はい、初心者向けに特化したカリキュラムを用意しているため、誰でも参加できます。</em>
       </li>
-      <li><strong>Q2:</strong> 受講後すぐに仕事に活かせますか？  
+      <li><strong>Q2:</strong> 受講後すぐに仕事に活かせますか？<br>
         <em>A2: コース修了後、基本的なディーリングスキルは身につきますので、カジノバーやイベントでの即戦力としてご活用いただけます。</em>
       </li>
-      <!-- その他のQ&Aを追加できます -->
     </ul>
   </section>
 
