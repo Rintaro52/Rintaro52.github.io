@@ -3,10 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My GitHub Page</title>
+  <title>1Dayポーカーディーラー | あなたも1日でプロディーラーに</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: #333;
+    }
+
+    /* ヘッダー */
+    header {
+      position: fixed;
+      width: 100%;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(5px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+
+    header .logo {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    header nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-size: 0.9em;
+    }
+
+    /* メインビジュアル */
+    .hero {
+      height: 100vh;
+      background: url('https://example.com/your_poker_image.jpg') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      color: #fff;
+      margin: 0.5em 0;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      color: #f9f9f9;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0.5em auto;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    }
+
+    .hero .cta {
+      margin-top: 1.5em;
+    }
+
+    .hero .cta button {
+      background: #f1c40f;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      transition: background 0.3s ease;
+    }
+
+    .hero .cta button:hover {
+      background: #d4ac0d;
+    }
+
+    /* フッター */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    /* レスポンシブ対応 */
+    @media screen and (max-width: 600px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+      .hero p {
+        font-size: 1em;
+      }
+      header nav a {
+        margin-left: 10px;
+      }
+    }
+
+  </style>
 </head>
 <body>
-  <h1>ようこそ</h1>
-  <p>これはGitHub Pagesで公開したテストページです。</p>
+
+  <header>
+    <div class="logo">1Dayポーカーディーラー</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#course">Course</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>1日でポーカーディーラーになれる</h1>
+    <p>「1Dayポーカーディーラー」は、未経験からたった1日でポーカーディーラーとして活躍できるスキルを身につける特別プログラムです。  
+    プロによる直伝トレーニングと実践的なカリキュラムで、あなたもすぐにテーブルに立てます。</p>
+    <div class="cta">
+      <button onclick="alert('詳細な説明ページは現在準備中です。')">今すぐ詳細を見る</button>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2024 1Dayポーカーディーラー All rights reserved.
+  </footer>
+
 </body>
 </html>
