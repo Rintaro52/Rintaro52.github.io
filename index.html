@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>１dayディーラークラス</title> <!-- サンプルLP削除 -->
+<title>１dayディーラークラス</title>
 <style>
   body {
     margin:0; padding:0;
@@ -148,6 +148,47 @@
     background:#fee;
   }
 
+  /* flowセクション */
+  #flow {
+    background:#fafafa;
+    padding:60px 20px;
+  }
+  #flow .flow-steps {
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    max-width:800px;
+    margin:0 auto;
+  }
+  #flow .step {
+    background:#fff;
+    border:1px solid #ddd;
+    padding:20px;
+    border-radius:5px;
+  }
+  #flow .step h3 {
+    margin-bottom:10px;
+    font-size:1.2em;
+  }
+
+  /* Q&Aセクション */
+  #qa {
+    background:#ffffff;
+    padding:60px 20px;
+  }
+  #qa dl {
+    max-width:800px;
+    margin:0 auto;
+  }
+  #qa dt {
+    font-weight:bold;
+    margin-top:20px;
+  }
+  #qa dd {
+    margin-bottom:20px;
+    padding-left:20px;
+  }
+
 </style>
 </head>
 <body>
@@ -156,11 +197,10 @@
   <div class="logo">１dayディーラークラス</div>
   <nav>
     <a href="#reason">選ばれる理由</a>
-    <!-- 料金へのリンクをcomparisonに変更 -->
     <a href="#comparison">料金</a>
     <a href="#flow">受講の流れ</a>
     <a href="#qa">Q&A</a>
-    <a href="#company">会社概要</a>
+    <!-- 「会社概要」を削除 -->
     <a href="#philosophy">理念</a>
   </nav>
 </header>
@@ -179,7 +219,6 @@
   <h3>1. 満足度</h3>
   <p>当講座を受講した方々から、高い満足度をいただいております。その一部をご紹介します。</p>
   <div class="voices">
-    <!-- 満足度の声を指定内容に変更 -->
     <blockquote>
       「未経験からのスタートでしたが、講師の丁寧な指導のおかげで自信を持ってディーラー業務をこなせるようになりました！」<br>
       <small>(20代 女性)</small>
@@ -255,6 +294,41 @@
       <td>海外カジノ提携<br>アミューズメントポーカー</td>
     </tr>
   </table>
+</section>
+
+<section id="flow">
+  <h2>受講の流れ</h2>
+  <div class="flow-steps">
+    <div class="step">
+      <h3>STEP 1: 無料説明会</h3>
+      <p>まずは公式LINEから無料説明会にご参加ください。講座の概要や学習の進め方をわかりやすくご案内します。</p>
+    </div>
+    <div class="step">
+      <h3>STEP 2: 受講申込</h3>
+      <p>無料説明会後、そのまま公式LINEを通じて受講申込が可能です。また、無料説明会に参加せずに直接受講を申し込むこともできます。お気軽にご相談ください。</p>
+    </div>
+    <div class="step">
+      <h3>STEP 3: 受講開始</h3>
+      <p>お申し込み完了後、学習スタート。1日のカリキュラムで現場レベルのディーリング技術を習得いただけます。</p>
+    </div>
+  </div>
+</section>
+
+<section id="qa">
+  <h2>Q&A</h2>
+  <dl>
+    <dt>Q: 初心者でも大丈夫ですか?</dt>
+    <dd>A: 大丈夫です。ポーカーディーラー未経験の方でもサポートいたします。</dd>
+
+    <dt>Q: センスは必要ですか？</dt>
+    <dd>A: 必要ありません。再現性の高い内容に仕上げていますのでご安心ください。</dd>
+
+    <dt>Q: 他の講座よりも安い理由はなぜですか？</dt>
+    <dd>A: オンラインの学習塾のノウハウを本講座に盛り込んでおり、高いクオリティーでネットを通じて受講できるからです。</dd>
+
+    <dt>Q: 持ち物はいりますか？</dt>
+    <dd>A: 不要です。</dd>
+  </dl>
 </section>
 
 <section id="philosophy">
