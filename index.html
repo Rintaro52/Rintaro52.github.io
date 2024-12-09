@@ -206,6 +206,49 @@
     font-size:1.2em;
   }
 
+  /* 追加部分のスタイル */
+  .icon-flow {
+    margin-top:60px;
+    text-align:center;
+  }
+  .icon-flow h3 {
+    font-size:1.4em;
+    margin-bottom:20px;
+  }
+  .icon-flow-steps {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    margin:0 auto;
+    max-width:900px;
+  }
+  .icon-step {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:5px;
+    padding:20px;
+    width:180px;
+    text-align:center;
+  }
+  .icon-step p {
+    margin-top:10px;
+    font-weight:bold;
+  }
+  .arrow {
+    font-size:2em;
+    font-weight:bold;
+    color:#333;
+  }
+  .flow-icon {
+    width:60px;
+    height:auto;
+  }
+
   #qa {
     background:#ffffff;
     padding:60px 20px;
@@ -362,6 +405,34 @@
       <p>お申し込み完了後、学習スタート。1日のカリキュラムで現場レベルのディーリング技術を習得いただけます。</p>
     </div>
   </div>
+
+  <!-- ここから追加部分 -->
+  <div class="icon-flow">
+    <h3>講座受講から実務開始までのイメージ</h3>
+    <div class="icon-flow-steps">
+      <div class="icon-step">
+        <img src="images/icon_learning.svg" alt="講座受講アイコン" class="flow-icon">
+        <p>講座受講</p>
+      </div>
+      <div class="arrow">→</div>
+      <div class="icon-step">
+        <img src="images/icon_skill.svg" alt="スキル習得アイコン" class="flow-icon">
+        <p>スキル習得</p>
+      </div>
+      <div class="arrow">→</div>
+      <div class="icon-step">
+        <img src="images/icon_test.svg" alt="試験・確認アイコン" class="flow-icon">
+        <p>試験・確認</p>
+      </div>
+      <div class="arrow">→</div>
+      <div class="icon-step">
+        <img src="images/icon_introduce.svg" alt="提携先紹介アイコン" class="flow-icon">
+        <p>提携先へ紹介・勤務スタート</p>
+      </div>
+    </div>
+  </div>
+  <!-- ここまで追加部分 -->
+
 </section>
 
 <section id="qa">
